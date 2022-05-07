@@ -7,3 +7,13 @@ get RainIntensity postproc {s/^R (\d+).*\r\n$/$1/;;$_}
 
 set kill cmd {"K\r\n"}
 set kill expect ".*"
+
+set Baudrate cmd {"B\r\n"}
+
+set Polling cmd {"P\r\n"}
+set Polling expect "p"
+
+set Continous cmd {"C\r\n"}
+set Continous expect "c"
+
+state RainIntensity
