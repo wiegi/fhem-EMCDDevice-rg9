@@ -1,0 +1,9 @@
+reading RainIntensity match "R (\d+).*\r\n"
+reading RainIntensity postproc {s/^R (\d+).*\r\n$/$1/;;$_}
+
+get RainIntensity cmd {"R\r\n"}
+get RainIntensity expect "^R (\d+).*\r\n$"
+get RainIntensity postproc {s/^R (\d+).*\r\n$/$1/;;$_}
+
+set kill cmd {"K\r\n"}
+set kill expect ".*"
