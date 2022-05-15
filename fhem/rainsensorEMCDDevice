@@ -1,0 +1,8 @@
+define rainsensor1 ECMDDevice rg9
+setuuid rainsensor1 61411285-f33f-a77b-38b8-0950340fd4f541a7
+attr rainsensor1 alarmDevice Sensor
+attr rainsensor1 alarmSettings alarm2,|rainsensor1:RainIntegral:.[2-9]|$EVENT|on
+attr rainsensor1 event-aggregator RainIntegral:1:none:integral:5
+attr rainsensor1 room DG->Studio
+attr rainsensor1 userReadings RainIntegral {ReadingsVal("rainsensor1","RainIntensity",0)}
+attr rainsensor1 verbose 0
